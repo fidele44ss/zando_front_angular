@@ -1,0 +1,89 @@
+<header class="h-20 bg-[#121212] flex justify-between items-center">
+    
+        <div class="flex flex-row space-x-10 mx-3 ">
+            <a routerLink="" class="cursor-pointer"><img src="zando+_logo.png" alt="logo" class="w-50 h-auto cursor-pointer" ></a>
+            
+        </div>
+
+        <div class="flex flex-row space-x-10 mx-8 text-white items-center">
+
+            <!-- search bar-->
+
+            <div class="flex items-center border border-gray-300 rounded-md px-2 w-64">
+                <!-- Icône de recherche -->
+                <svg xmlns="http://www.w3.org/2000/svg" 
+                    class="h-5 w-5 text-gray-500" 
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1110.5 3a7.5 7.5 0 016.15 13.65z" />
+                </svg>
+
+                <!-- Champ input -->
+                <input type="text" 
+                        placeholder="Rechercher..." 
+                        class="flex-1 px-2 py-1 focus:outline-none">
+            </div>
+
+
+            <!--Nav options-->
+            <nav class="space-x-8">
+                <ul class="flex flex-row space-x-8 text-base t" >
+                    <li><a routerLink="product_list" class="hover:bg-white hover:text-black p-4 rounded-lg">Show product</a></li>
+                     <li><a routerLink="About" class="hover:bg-white hover:text-black p-4 rounded-lg">About</a></li>
+                </ul>
+            </nav>
+
+
+
+            
+          <div class="flex items-center space-x-4">
+
+  <!-- profil-->
+
+   <div class="relative inline-block text left">
+
+  <img src="user.png" 
+       alt="User Avatar" 
+       class="w-12 h-12 rounded-full object-cover border border-gray-300"
+       (click)="toggleDropdown()"
+       >
+
+       <!-- menu deroulant-->
+ 
+       @if (dropdownOpen) {
+  <div class="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg z-50 ">
+    <ul class="py-2">
+      <li>
+        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-black hover:text-white">
+          Mon compte
+        </a>
+      </li>
+      <li>
+        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-black hover:text-white">
+          Paramètres
+        </a>
+      </li>
+      <li>
+        <a routerLink="" class="block px-4 py-2 text-sm text-gray-700 hover:bg-black hover:text-white">
+          Déconnexion
+        </a>
+      </li>
+    </ul>
+  </div>
+}
+
+    
+
+
+
+    </div>
+
+
+</div>
+
+
+
+
+        </div>
+    
+</header>
