@@ -1,0 +1,80 @@
+<div class="flex h-screen">
+  <!-- Hamburger button (mobile only) -->
+  <button
+    class="md:hidden fixed top-4 left-4 z-50 px-3 py-2 bg-blue-600 text-white rounded"
+    (click)="toggleAside()"
+  >
+    <!-- Icône hamburger -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+         viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+  </button>
+
+  <!-- Sidebar -->
+  @if (isAsideOpen) {
+    <aside
+      class="w-64 p-5 mt-20 bg-[#95A5A6] text-black h-screen overflow-y-auto"
+    >
+      <h2 class="text-xl font-bold mb-4 border-b border-gray-700 pb-2">
+        Filtres
+      </h2>
+
+      <!-- Tri -->
+      <div class="mb-6">
+        <label class="block mb-2 font-semibold">Trier par</label>
+        <select class="w-full p-2 rounded bg-gray-700 text-white">
+          <option value="popularity">Popularité</option>
+          <option value="newest">Nouveautés</option>
+          <option value="price_low">Prix croissant</option>
+          <option value="price_high">Prix décroissant</option>
+        </select>
+      </div>
+
+      <!-- Catégories -->
+      <div class="mb-6">
+        <label class="block mb-2 font-semibold">Catégories</label>
+        <ul class="space-y-2">
+          <li><input type="checkbox" id="cat1" /> <label for="cat1">Mode</label></li>
+          <li><input type="checkbox" id="cat2" /> <label for="cat2">Électronique</label></li>
+          <li><input type="checkbox" id="cat3" /> <label for="cat3">Maison</label></li>
+          <li><input type="checkbox" id="cat4" /> <label for="cat4">Beauté</label></li>
+        </ul>
+      </div>
+
+      <!-- Prix -->
+      <div class="mb-6">
+        <label class="block mb-2 font-semibold">Prix</label>
+        <input type="range" min="0" max="1000" step="50" class="w-full" />
+        <div class="flex justify-between text-sm mt-1">
+          <span>0 €</span>
+          <span>1000 €</span>
+        </div>
+      </div>
+
+      <!-- Options -->
+      <div class="mb-6">
+        <label class="block mb-2 font-semibold">Options</label>
+        <ul class="space-y-2">
+          <li><input type="checkbox" id="opt1" /> <label for="opt1">Livraison gratuite</label></li>
+          <li><input type="checkbox" id="opt2" /> <label for="opt2">En stock</label></li>
+          <li><input type="checkbox" id="opt3" /> <label for="opt3">Promo</label></li>
+        </ul>
+      </div>
+    </aside>
+  }
+
+  <!-- Main Content -->
+  <main class="flex-1 mt-20 overflow-y-auto bg-gray-100 p-6">
+    <h1 class="text-2xl font-bold mb-4">Produits</h1>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white shadow rounded p-4">Produit 1</div>
+      <div class="bg-white shadow rounded p-4">Produit 2</div>
+      <div class="bg-white shadow rounded p-4">Produit 3</div>
+      <div class="bg-white shadow rounded p-4">Produit 4</div>
+      <div class="bg-white shadow rounded p-4">Produit 5</div>
+      <div class="bg-white shadow rounded p-4">Produit 6</div>
+    </div>
+  </main>
+</div>
