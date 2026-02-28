@@ -1,10 +1,10 @@
-import { Routes } from '@angular/router';
+import {RouterModule, Routes } from '@angular/router';
 
 export const routes: Routes = [
 
     {
         path:'',
-        loadComponent : () =>import('./../pages/home/home').then(a=> a.Home) 
+        loadComponent : () =>import('./pages/home/home').then(a=> a.Home) 
     },
     {
         path:'login',
