@@ -20,44 +20,53 @@
                 <!-- Sidebar -->
                 @if (isAsideOpen) {
                     <aside
-                                class="w-70 p-7  bg-[#95A5A6] text-black h-screen overflow-y-auto"
+                                class="w-80 p-7  bg-[#f6f6f5] text-black h-screen overflow-y-auto"
                                 >
                                 <h2 class="text-xl mt-6 font-bold mb-4 border-b border-gray-700 pb-2">
   <!-- Search bar -->
   <div class="relative">
-    <input 
-      type="text" 
-      placeholder="Rechercher..." 
-      class="w-full px-4 py-2 rounded-md border border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-    />
-    <span class="absolute right-3 top-2.5 text-gray-500">
-      🔍
-    </span>
+    <div class="flex items-center bg-white rounded-md px-2 focus-within:ring-2 focus-within:ring-[#009687]">
+  <!-- Loupe Icon -->
+  <svg xmlns="http://www.w3.org/2000/svg" 
+       class="h-7 w-7 text-gray-500" 
+       fill="none" 
+       viewBox="0 0 24 24" 
+       stroke="currentColor">
+    <path stroke-linecap="round" 
+          stroke-linejoin="round" 
+          stroke-width="2" 
+          d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1110.5 3a7.5 7.5 0 016.15 13.65z" />
+  </svg>
+
+  <!-- Input -->
+  <input 
+    type="text" 
+    placeholder="Rechercher..." 
+    class="w-full px-2 py-2 focus:outline-none"
+  />
+</div>
+
+
+
+
   </div>
 </h2>
 
 
                                 <!-- Tri -->
-                                <div class="mb-6">
-                                    <label class="block mb-2 font-semibold">Trier par</label>
-                                    <select class="w-full p-2 rounded bg-gray-700 text-white">
-                                    <option value="popularity">Popularité</option>
-                                    <option value="newest">Nouveautés</option>
-                                    <option value="price_low">Prix croissant</option>
-                                    <option value="price_high">Prix décroissant</option>
-                                    </select>
-                                </div>
+                              <div class="mb-6">
+  <label class="block mb-2 font-semibold">Trier par</label>
+  <select 
+    class="w-full p-2 rounded-lg bg-white text-black border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#009687]"
+  >
+    <option value="popularity">Popularité</option>
+    <option value="newest">Nouveautés</option>
+    <option value="price_low">Prix croissant</option>
+    <option value="price_high">Prix décroissant</option>
+  </select>
+</div>
 
-                                <!-- Catégories -->
-                                <div class="mb-6">
-                                    <label class="block mb-2 font-semibold">Catégories</label>
-                                    <ul class="space-y-2 space-x-3">
-                                    <li><input type="checkbox" id="cat1" class="mx-4" /> <label for="cat1">Mode</label></li>
-                                    <li><input type="checkbox" id="cat2" class="mx-4"/> <label for="cat2">Électronique</label></li>
-                                    <li><input type="checkbox" id="cat3" class="mx-4"/> <label for="cat3">Maison</label></li>
-                                    <li><input type="checkbox" id="cat4" class="mx-4"/> <label for="cat4">Beauté</label></li>
-                                    </ul>
-                                </div>
+                            
 
                                 <!-- Prix -->
                         <div class="mb-6">
@@ -79,7 +88,7 @@
 
                                     <!-- Track highlight -->
                                     <div class="absolute top-1/2 left-0 w-full h-1 bg-gray-300 rounded transform -translate-y-1/2">
-                                    <div class="absolute h-1 bg-[#2596be] rounded"
+                                    <div class="absolute h-1 bg-[#009687] rounded"
                                         [style.left.%]="(minValue/1000)*100"
                                         [style.width.%]="((maxValue-minValue)/1000)*100"></div>
                                     </div>
@@ -98,9 +107,10 @@
                 }
 
                 <!-- Main Content -->
-                <main class="flex-1 overflow-y-auto bg-gray-100 p-6">
+                <main class="flex-1 overflow-y-auto bg-[#f5f5f5] p-6">
 
 <div class="mt-6 flex flex-wrap justify-around">         
+    <app-product-card></app-product-card>
     <app-product-card></app-product-card>
     <app-product-card></app-product-card>
     <app-product-card></app-product-card>
