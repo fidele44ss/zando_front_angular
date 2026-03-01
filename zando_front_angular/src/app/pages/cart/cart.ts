@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { Header } from '../../components/header/header';
 import { Modal } from '../../components/modal/modal';
+import { RouterLink } from '@angular/router';
+
 
 @Component({
   selector: 'app-cart',
-  imports: [Header, Modal],
+  imports: [Modal, RouterLink],
   templateUrl: './cart.html',
   styleUrl: './cart.css',
 })

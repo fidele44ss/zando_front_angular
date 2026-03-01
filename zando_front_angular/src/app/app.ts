@@ -1,16 +1,25 @@
 import { Component} from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-
+import { Header } from './components/header/header';
+import { RouterOutlet, Router, NavigationEnd } from '@angular/router';
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  imports: [Header,RouterOutlet], 
+  templateUrl: 'app.html'
 })
 export class App {
 
+  currentRoute ='';
+
+  constructor(private router : Router){
+
+    this.router.events.subscribe(event =>{
+      if(event instanceof NavigationEnd){
+        this.currentRoute = event.urlAfterRedirects;
+      }
+    })
+  }
 
 }
 

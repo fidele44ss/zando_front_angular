@@ -1,14 +1,13 @@
 import { Component,signal, HostListener } from '@angular/core';
 import { CarrouselComponent } from '../../components/carrousel/carrousel';
 import { ProductCard } from '../../components/product-card/product-card';
-import { Header } from '../../components/header/header';
 import { FormsModule } from '@angular/forms';
 
 
 
 @Component({
   selector: 'app-home',
-  imports: [CarrouselComponent, ProductCard, Header, FormsModule], 
+  imports: [CarrouselComponent, ProductCard, FormsModule], 
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
