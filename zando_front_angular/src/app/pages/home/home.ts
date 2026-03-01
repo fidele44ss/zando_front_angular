@@ -1,14 +1,21 @@
 import { Component,signal, HostListener } from '@angular/core';
+import { CarrouselComponent } from '../../components/carrousel/carrousel';
+import { ProductCard } from '../../components/product-card/product-card';
+import { Header } from '../../components/header/header';
+import { FormsModule } from '@angular/forms';
 
 
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [CarrouselComponent, ProductCard, Header, FormsModule], 
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
 export class Home {
+
+  minValue = 200;
+  maxValue = 800;
 
   isAsideOpen = true;
   isDesktop = false;
