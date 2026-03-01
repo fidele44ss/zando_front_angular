@@ -1,12 +1,12 @@
 
-<div class="flex items-center justify-center h-screen bg-gray-100">
+<div class="flex items-center justify-center h-screen bg-gray-300">
   
   <!-- Wrapper with fixed max width -->
   <div class="flex items-stretch w-3/4">
     
     <!-- Left image (slightly wider) -->
     <div class="flex items-center justify-center w-2/3 bg-white rounded-l-lg">
-      <img src="zando+.png" alt="zando+ customer" class="h-full object-contain">
+      <img src="zando+.png" alt="zando+ customer" class="h-full object-contain w-full">
     </div>
 
     <!-- Right form -->
@@ -34,14 +34,16 @@
 
           <!-- Forgot password -->
           <div class="text-right my-5">
-            <a href="#" class="text-sm text-indigo-600 hover:underline">Mot de passe oublié?</a>
+            <a routerLink="" class="text-sm text-indigo-600 hover:underline">Mot de passe oublié?</a>
           </div>
 
           <!-- Login button -->
+          <a routerLink="">
           <button type="submit"
             class="w-full bg-[#2596be] text-white py-2 px-4 rounded-md hover:bg-indigo-700 transition">
             Se connecter
           </button>
+          </a>
         </form>
 
         <!-- Divider -->
