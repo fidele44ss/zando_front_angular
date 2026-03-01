@@ -1,10 +1,10 @@
-<div class="flex flex-col md:flex-row bg-gray-600 p-6">
+<div class="flex flex-col md:flex-row bg-white p-6">
 
   <!-- Image -->
-  <div class="flex justify-center items-center md:w-1/2 bg-[#121212] p-6">
-    <img src="https://th.bing.com/th?id=OIF.PsxfCVn4eSHK3i%2bN8JbkDQ&w=219&h=220&c=7&r=0&o=7&pid=1.7&rm=3" 
+  <div class="flex justify-center items-center md:w-1/2 bg-[#f6f6f5] p-6">
+    <img src="https://th.bing.com/th?id=OIF.PsxfCVn4eSHK3i%2bN8JbkDQ&w=219&h=220&c=7&r=0&o=7&pid=1.7&rm=3" ["
          alt="product" 
-         class="max-w-xs rounded-lg shadow-lg">
+         class="w-full rounded-lg shadow-lg">
   </div>
 
   <!-- Infos produit -->
@@ -27,16 +27,16 @@
     <div class="flex justify-center space-x-4 mb-4">
       <p class="text-xl">Qté</p>
       <button (click)="incrementQte()" 
-              class="bg-black text-white text-xl px-3 py-1 rounded-lg hover:bg-white hover:text-black">+</button>
+              class="bg-white text-black text-xl px-3 py-1 rounded-lg hover:bg-[#009687] hover:text-black">+</button>
       <p class="text-2xl">{{qteNumber}}</p>
       <button (click)="decrementQte()" 
-              class="bg-black text-white text-xl px-3 py-1 rounded-lg hover:bg-white hover:text-black">-</button>
+              class="bg-white text-black text-xl px-3 py-1 rounded-lg hover:bg-[#009687] hover:text-black">-</button>
     </div>
 
     <!-- Paiement -->
     <div class="flex flex-col">
       <select id="payment" name="payment"
-              class="bg-gray-900 text-lg text-white p-3 rounded-lg mb-4 disabled:bg-gray-500"
+              class="bg-[#f6f6f5] text-lg text-black p-3 rounded-lg mb-4 disabled:bg-gray-500"
               [disabled]="qteNumber===0"
               [(ngModel)]="selectedOption">
         <option value="">Choisir un mode de paiement</option>
@@ -44,7 +44,7 @@
         <option value="debit">Carte Visa</option>
       </select>
 
-      <button class="bg-[#2596be] w-full rounded-lg p-3 text-2xl text-white hover:bg-green-500 disabled:bg-gray-500"
+      <button class="bg-[#009687] w-full rounded-lg p-3 text-2xl text-white hover:bg-green-500 disabled:bg-gray-500"
               [disabled]="!selectedOption">
         Acheter
       </button>
