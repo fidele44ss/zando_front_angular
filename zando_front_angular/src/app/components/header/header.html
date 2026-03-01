@@ -7,33 +7,39 @@
 
         <div class="flex flex-row space-x-10 mx-8 text-white items-center">
 
-            <!-- search bar-->
-
-            <div class="flex items-center border border-gray-300 rounded-md px-2 w-64">
-                <!-- Icône de recherche -->
-                <svg xmlns="http://www.w3.org/2000/svg" 
-                    class="h-5 w-5 text-gray-500" 
-                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1110.5 3a7.5 7.5 0 016.15 13.65z" />
-                </svg>
-
-
-
-                <!-- Champ input -->
-                <input type="text" 
-                        placeholder="Rechercher..." 
-                        class="flex-1 px-2 py-1 focus:outline-none">
-            </div>
+          
 
 
             <!--Nav options-->
-            <nav class="space-x-8">
-                <ul class="flex flex-row space-x-8 text-base t" >
-                    <li><a routerLink="product_list" class="hover:bg-white hover:text-black p-4 rounded-lg">Show product</a></li>
-                     <li><a routerLink="About" class="hover:bg-white hover:text-black p-4 rounded-lg">About</a></li>
-                </ul>
-            </nav>
+           <nav class="space-x-8">
+  <ul class="flex flex-row space-x-8 text-base">
+    <!-- Cart Icon -->
+    <li>
+      <a routerLink="cart" class="hover:bg-white hover:text-black p-4 rounded-lg flex items-center">
+        <!-- Shopping Cart Icon -->
+        <img 
+    src="https://cdn-icons-png.flaticon.com/128/9725/9725740.png" 
+    alt="menu icon" 
+    class="h-8 w-8"
+  />
+      </a>
+    </li>
+
+    <!-- Truck Icon -->
+    <li>
+      <a routerLink="About" class="hover:bg-white hover:text-black p-4 rounded-lg flex items-center">
+        <!-- Truck Delivery Icon -->
+        <img 
+    src="https://cdn-icons-png.flaticon.com/128/10473/10473350.png" 
+    alt="menu icon" 
+    class="h-8 w-8"
+  />
+      </a>
+    </li>
+  </ul>
+</nav>
+
+
 
 
 
@@ -66,7 +72,7 @@
         </a>
       </li>
       <li>
-        <a routerLink="" class="block px-4 py-2 text-sm text-gray-700 hover:bg-black hover:text-white">
+        <a routerLink="login" class="block px-4 py-2 text-sm text-gray-700 hover:bg-black hover:text-white">
           Déconnexion
         </a>
       </li>

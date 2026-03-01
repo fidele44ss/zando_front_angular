@@ -10,6 +10,11 @@ export const routes: Routes = [
         path:'login',
         loadComponent : () =>import('./pages/login/login').then(a=> a.Login) 
     },
+    {
+        path:'cart',
+        loadComponent : () =>import('./pages/cart/cart').then(a=> a.Cart) 
+    },
+     
      
 
 
